@@ -33,7 +33,6 @@
     
     //起点位置
     CGFloat x = .0;
-    CGFloat y = .0;
     //划分出来了行以后，就容易依照对齐方式布局
     for (int i = 0; i < lines.count; i++) {
         
@@ -79,23 +78,14 @@
                     default:
                         break;
                 }
-                //首行的起始位置
-                if (i == 0) {
-                    y = attributes.frame.origin.y;
-                }
             }
             
             CGRect frame = attributes.frame;
             frame.origin.x = x;
-            frame.origin.y = y;
             attributes.frame = frame;
             
             //设置下个对象的起始位置
             x += frame.size.width + space;
-            if (j == line.count - 1) {
-                
-                y = attributes.frame.origin.y + attributes.size.height + [self evaluatedMinimumLineSpacingForSectionAtIndex:[updatedAttributes indexOfObject:attributes]];
-            }
         }
     }
     
@@ -130,7 +120,8 @@
          *  | (leftPadding) xxxx (itemSpacing) xxxx (itemSpacing) .... (rightPadding) |
          */
         //判断是否要换行
-        if (sumWidth + currentAttributes.frame.size.width <= maxRight) {
+        if (sumWidth + currentAttributes.frame.size.width <= maxRight &&
+            currentAttributes.indexPath.row != 0) {
             
             [line addObject:currentAttributes];
         }
