@@ -61,11 +61,11 @@
 		77164BB6CBD5C5F9D41619B0 /* Pods_DFCollectionViewAlignmentLayOut_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFCollectionViewAlignmentLayOut_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A026872A6C8917C3222FC9BA /* Pods_DFCollectionViewAlignmentLayOut_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFCollectionViewAlignmentLayOut_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACA797CA80341401DB84E305 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B6F3210DDF78CB46C2F45E61 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		ACA797CA80341401DB84E305 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B6F3210DDF78CB46C2F45E61 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B9030B1FB883B472E209A7CA /* Pods-DFCollectionViewAlignmentLayOut_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFCollectionViewAlignmentLayOut_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFCollectionViewAlignmentLayOut_Tests/Pods-DFCollectionViewAlignmentLayOut_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C9B8D7896D76BA968DABC486 /* Pods-DFCollectionViewAlignmentLayOut_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFCollectionViewAlignmentLayOut_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFCollectionViewAlignmentLayOut_Example/Pods-DFCollectionViewAlignmentLayOut_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D6E48824E30B8FCF61B1AA1C /* DFCollectionViewAlignmentLayOut.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DFCollectionViewAlignmentLayOut.podspec; path = ../DFCollectionViewAlignmentLayOut.podspec; sourceTree = "<group>"; };
+		D6E48824E30B8FCF61B1AA1C /* DFCollectionViewAlignmentLayOut.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DFCollectionViewAlignmentLayOut.podspec; path = ../DFCollectionViewAlignmentLayOut.podspec; sourceTree = "<group>"; };
 		D96884DCCCAB8ADE358FD18F /* Pods-DFCollectionViewAlignmentLayOut_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFCollectionViewAlignmentLayOut_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFCollectionViewAlignmentLayOut_Example/Pods-DFCollectionViewAlignmentLayOut_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,6 +250,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "acct<blob>=0xE585A8E7A88BE681BA";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 8QVHP566GK;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -542,12 +546,16 @@
 			baseConfigurationReference = C9B8D7896D76BA968DABC486 /* Pods-DFCollectionViewAlignmentLayOut_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8QVHP566GK;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DFCollectionViewAlignmentLayOut/DFCollectionViewAlignmentLayOut-Prefix.pch";
 				INFOPLIST_FILE = "DFCollectionViewAlignmentLayOut/DFCollectionViewAlignmentLayOut-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LongShine.demo.DFCollectionViewAlignmentLayOut-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5b3475b9-da2e-477b-ac5b-c52a24719160";
+				PROVISIONING_PROFILE_SPECIFIER = Guangzhou_development;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -557,12 +565,15 @@
 			baseConfigurationReference = D96884DCCCAB8ADE358FD18F /* Pods-DFCollectionViewAlignmentLayOut_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DFCollectionViewAlignmentLayOut/DFCollectionViewAlignmentLayOut-Prefix.pch";
 				INFOPLIST_FILE = "DFCollectionViewAlignmentLayOut/DFCollectionViewAlignmentLayOut-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.LongShine.demo.DFCollectionViewAlignmentLayOut-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
