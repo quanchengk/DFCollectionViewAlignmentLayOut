@@ -1,0 +1,14 @@
+use_frameworks!
+
+target 'DFCollectionViewAlignmentLayOut_Example' do
+  pod 'DFCollectionViewAlignmentLayOut', :path => '../'
+
+  target 'DFCollectionViewAlignmentLayOut_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+  end
+end
