@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B3F0328B212117F7008F41D1 /* LSiOSDoc */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B3F0328E212117F8008F41D1 /* Build configuration list for PBXAggregateTarget "LSiOSDoc" */;
+			buildPhases = (
+				B3F0329021211801008F41D1 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = LSiOSDoc;
+			productName = LSiOSDoc;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		067DFD01E6FDCA30E3E54E55 /* Pods_DFCollectionViewAlignmentLayOut_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A026872A6C8917C3222FC9BA /* Pods_DFCollectionViewAlignmentLayOut_Tests.framework */; };
 		1CFC09B50B95E0246D3C907F /* Pods_DFCollectionViewAlignmentLayOut_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77164BB6CBD5C5F9D41619B0 /* Pods_DFCollectionViewAlignmentLayOut_Example.framework */; };
@@ -257,6 +271,11 @@
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
+					B3F0328B212117F7008F41D1 = {
+						CreatedOnToolsVersion = 9.4;
+						DevelopmentTeam = 8QVHP566GK;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "DFCollectionViewAlignmentLayOut" */;
@@ -274,6 +293,7 @@
 			targets = (
 				6003F589195388D20070C39A /* DFCollectionViewAlignmentLayOut_Example */,
 				6003F5AD195388D20070C39A /* DFCollectionViewAlignmentLayOut_Tests */,
+				B3F0328B212117F7008F41D1 /* LSiOSDoc */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +392,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B3F0329021211801008F41D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\nmkdir -p headerDoc\nfind /Users/longshine/Desktop/新能源/基础框架/DFCollectionViewAlignmentLayOut/DFCollectionViewAlignmentLayOut/Classes -name \\*.h -print | xargs headerdoc2html -o headerDoc\ngatherheaderdoc headerDoc\nexit 0";
 		};
 		E385228F22587CFAEF0BA817 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -622,6 +655,24 @@
 			};
 			name = Release;
 		};
+		B3F0328C212117F8008F41D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QVHP566GK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3F0328D212117F8008F41D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QVHP566GK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,6 +699,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F0328E212117F8008F41D1 /* Build configuration list for PBXAggregateTarget "LSiOSDoc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F0328C212117F8008F41D1 /* Debug */,
+				B3F0328D212117F8008F41D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

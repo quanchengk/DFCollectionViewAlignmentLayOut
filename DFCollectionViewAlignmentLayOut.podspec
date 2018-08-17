@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DFCollectionViewAlignmentLayOut'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '带对齐方式的UICollectionView布局'
 
 # This description is used to generate tags and improve search results.
@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 UICollectionViewLayOut with 3 alignments (include left, right and middle).
+更新说明：
+增加流水布局样式，要求section必须为1，且只能垂直滑动，不支持header/footer；补充说明文档；
                        DESC
 
   s.homepage         = 'https://github.com/quanchengk/DFCollectionViewAlignmentLayOut'
